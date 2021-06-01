@@ -27,7 +27,7 @@ app_id & api_hash 需至 https://my.telegram.org 用自己帳號申請,並開啟
 
 chat_name改成自己想發送的群組/用戶名稱
 
-chat_id 則在完chat_name後執行checkChatId.py就可獲得
+chat_id 則在改完chat_name後執行checkChatId.py就可獲得
 
 第一次執行checkChatId.py時會需要輸入自己的手機號碼(含+之國際號)
 
