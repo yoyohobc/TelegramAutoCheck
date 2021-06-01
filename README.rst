@@ -6,7 +6,7 @@ Telegram自動打卡上下班
 
 發訊息的部分利用 Telethon 套件操作 Telegram的API 來完成
 
-設定時間部分則使用APScheduler這個定時任務框架來完成
+設定時間部分則使用APScheduler定時任務框架來完成
 
 Telethon : https://github.com/LonamiWebs/Telethon
 
