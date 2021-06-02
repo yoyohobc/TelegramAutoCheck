@@ -20,7 +20,7 @@ api_id = 123456
 api_hash = '0123456789abcdef0123456789abcdef'
 
 #寫入csv
-def writeCsv(checkText):
+def writeCsv(checkText, clientInfo):
     csvName = str(clientInfo.get('first_name')) + '_' + str(clientInfo.get('last_name')) + '.csv'
     if(path.isfile(csvName)):
         #讀取CSV
@@ -43,19 +43,3 @@ def writeCsv(checkText):
             writer.writerow(['打卡訊息','打卡時間','群組/用戶名稱'])
             # 寫入打卡訊息
             writer.writerow([checkText, datetime.now().ctime(), chat_name])
-#上班打卡
-async def checkIn():
-    #送出上班打卡訊息
-    await client.send_message(chat_id, checkInText)
-    #寫入CSV
-    writeCsv(checkInText)
-    print(datetime.now().ctime(), checkInText)
-#下班打卡
-async def checkOut():
-    #送出下班打卡訊息
-    await client.send_message(chat_id, checkOutText)
-    #寫入CSV
-    writeCsv(checkOutText)
-    print(datetime.now().ctime(), checkOutText)
-    
-

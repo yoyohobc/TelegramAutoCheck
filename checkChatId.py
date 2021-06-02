@@ -14,6 +14,3 @@ if(chat_id != None):
     print("chat_id :", chat_id)
 else:
     print("找不到chat_id")
-
-    
-
