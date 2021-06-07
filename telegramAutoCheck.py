@@ -20,11 +20,11 @@ async def checking(texts, mins):
     writeCsv(texts, clientInfo)
     print(datetime.now().ctime(), texts)
 #上班打卡
-def checkIn():
-    checking(checkInText, 10)
+async def checkIn():
+    await checking(checkInText, 10)
 #下班打卡
-def checkOut():
-    checking(checkOutText, 4)
+async def checkOut():
+    await checking(checkOutText, 2)
 #實例化一個調度器 
 scheduler = AsyncIOScheduler()
 scheduler.add_job(checkIn, 'cron', minute=checkInTime[3:5], hour=checkInTime[:2], day_of_week=checkWeek, misfire_grace_time=900) 

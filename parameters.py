@@ -21,7 +21,7 @@ api_hash = '0123456789abcdef0123456789abcdef'
 
 #隨機暫停0-X分鐘
 def randomMinutes(maxMins):
-    mins = random.randit(0,maxMins)
+    mins = random.randint(0,maxMins)
     secs = mins*60
     time.sleep(secs)
 
