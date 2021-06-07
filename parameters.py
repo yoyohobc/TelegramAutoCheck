@@ -1,4 +1,4 @@
-import csv,asyncio
+import csv,asyncio,random,time
 from os import path
 from telethon import TelegramClient, sync
 from datetime import datetime
@@ -18,6 +18,12 @@ checkWeek = 'mon-fri'
 #發送端APP設定
 api_id = 123456
 api_hash = '0123456789abcdef0123456789abcdef'
+
+#隨機暫停0-X分鐘
+def randomMinutes(maxMins):
+    mins = random.randit(0,maxMins)
+    secs = mins*60
+    time.sleep(secs)
 
 #寫入csv
 def writeCsv(checkText, clientInfo):
