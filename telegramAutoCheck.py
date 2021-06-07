@@ -11,7 +11,7 @@ for key, value in clientInfo.items():
 print("chat_name :", chat_name)
 print("chat_id :", chat_id)
 #打卡
-async def checking(texts,mins):
+async def checking(texts, mins):
     #隨機暫停X分鐘
     randomMinutes(mins)
     #送出打卡訊息
